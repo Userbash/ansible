@@ -1,0 +1,20 @@
+---
+- hosts: mysql
+  gather_facts: false
+
+  tasks:
+  - debug: msg="Running test app through Ansible shell module..."
+
+  - name: Start application
+    sudo:
+    shell: "/usr/local/bin/backups.sh"
+    args:
+      chdir: "/usr/local/bin"
+      executable: "/bin/bash"
+
+  - debug: msg="Running test app through Ansible command module..."
+
+  - name: Start application
+    command: "nohup /usr/local/bin/backups.sh &"
+    args:
+      chdir: "/usr/local/bin"
