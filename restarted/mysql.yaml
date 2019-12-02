@@ -1,0 +1,40 @@
+---
+
+- hosts: file
+  tasks:
+    - name: Restart smbd
+      runit:
+       name: smbd
+       state: restarted
+  
+    - name: Run using a project directory
+      docker_compose:
+       project_src: /home/alex/docker-mysql-master
+       state: absent
+ 
+    - name: run the service defined in docker-mysql-master's docker-compose.yml
+      docker_compose:
+       project_src: /home/alex/docker-mysql-master
+
+- hosts: mysql
+  tasks:
+    - name: Run using a project directory
+      docker_compose:
+       project_src: /home/alex/docker-mysql-master
+       state: absent
+
+    - name: run the service defined in docker-mysql-master's docker-compose.yml
+      docker_compose:
+       project_src: /home/alex/docker-mysql-master
+
+- hosts: zabbix
+  tasks:
+   - name: Run using a zabbix
+     docker_compose:
+      project_src: /home/alex/docker-zabbix-master
+      state: absent
+
+   - name: run the service defined in Zabbix's docker-compose.yml
+     docker_compose:
+      project_src: /home/alex/docker-zabbix-master
+

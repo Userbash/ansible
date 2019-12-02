@@ -1,0 +1,36 @@
+---
+
+- hosts: all
+  tasks:
+  - name: Upgrade pakages Servers
+    xbps: update_cache=yes upgrade=yes
+    sudo: True
+    tags: [packages]      
+
+- hosts: all
+  tasks:
+  - name: Ansible delete files older cache  than 1 days example
+    find:
+      paths: /var/cache/xbps
+      age: 1d
+    register: files_to_delete
+
+  - name: Ansible remove files older than a date example
+    file:
+      path: "{{ item.path }}"
+      state: absent
+    with_items: "{{ files_to_delete.files }}"
+
+- hosts: file
+  tasks:
+  - name: Ansible delete files older backup  than 1 days
+    find:
+      paths: /media/ds01/files/home/dump
+      age: 3d
+    register: files_to_delete
+
+  - name: Ansible remove files older than a date example
+    file:
+      path: "{{ item.path }}"
+      state: absent
+    with_items: "{{ files_to_delete.files }}"
