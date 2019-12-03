@@ -1,0 +1,275 @@
+
+2019-12-02 15:32:47,134 p=143821 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/docker.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:32:47,205 p=143821 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/iocage.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:32:47,205 p=143821 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/jail.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:32:47,206 p=143821 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/kubectl.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:32:47,207 p=143821 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/libvirt_lxc.py) as it seems to be invalid: No
+module named 'distutils.spawn'
+
+2019-12-02 15:32:47,209 p=143821 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/lxd.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:32:47,224 p=143821 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/oc.py) as it seems to be invalid: No module named
+'distutils.spawn'
+
+2019-12-02 15:32:47,271 p=143821 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/zone.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:32:47,315 p=143821 u=root |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default). This feature 
+will be removed in version 2.9. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-12-02 15:32:47,578 p=143821 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/callback/osx_say.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:32:47,581 p=143821 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/callback/say.py) as it seems to be invalid: No module named
+'distutils.spawn'
+
+2019-12-02 15:32:47,640 p=143821 u=root |  PLAY [book] ****************************************************************************************************************************
+2019-12-02 15:32:47,659 p=143821 u=root |  TASK [Gathering Facts] *****************************************************************************************************************
+2019-12-02 15:32:56,149 p=143821 u=root |  [WARNING]: sftp transfer mechanism failed on [172.16.0.30]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2019-12-02 15:33:00,355 p=143821 u=root |  ok: [book]
+2019-12-02 15:33:00,393 p=143821 u=root |  TASK [install xbps docker] *************************************************************************************************************
+2019-12-02 15:33:01,843 p=143821 u=root |  [WARNING]: sftp transfer mechanism failed on [172.16.0.30]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2019-12-02 15:33:06,114 p=143821 u=root |  ok: [book] => (item=docker)
+2019-12-02 15:33:11,883 p=143821 u=root |  ok: [book] => (item=docker-compose)
+2019-12-02 15:33:17,677 p=143821 u=root |  ok: [book] => (item=docker-machine)
+2019-12-02 15:33:17,720 p=143821 u=root |  TASK [Ensure group "ihm" exists] *******************************************************************************************************
+2019-12-02 15:33:19,194 p=143821 u=root |  [WARNING]: sftp transfer mechanism failed on [172.16.0.30]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2019-12-02 15:33:21,931 p=143821 u=root |  ok: [book]
+2019-12-02 15:33:21,973 p=143821 u=root |  TASK [Create symbolic link] ************************************************************************************************************
+2019-12-02 15:33:23,386 p=143821 u=root |  [WARNING]: sftp transfer mechanism failed on [172.16.0.30]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2019-12-02 15:33:25,868 p=143821 u=root |  fatal: [book]: FAILED! => {"changed": false, "gid": 0, "group": "root", "mode": "0755", "msg": "refusing to convert from directory to symlink for /mnt/", "owner": "root", "path": "/mnt/", "size": 6, "state": "directory", "uid": 0}
+2019-12-02 15:33:25,871 p=143821 u=root |  PLAY RECAP *****************************************************************************************************************************
+2019-12-02 15:33:25,872 p=143821 u=root |  book                       : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-12-02 15:35:26,066 p=143898 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/docker.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:35:26,137 p=143898 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/iocage.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:35:26,138 p=143898 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/jail.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:35:26,139 p=143898 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/kubectl.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:35:26,140 p=143898 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/libvirt_lxc.py) as it seems to be invalid: No
+module named 'distutils.spawn'
+
+2019-12-02 15:35:26,145 p=143898 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/lxd.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:35:26,161 p=143898 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/oc.py) as it seems to be invalid: No module named
+'distutils.spawn'
+
+2019-12-02 15:35:26,216 p=143898 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/zone.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:35:26,261 p=143898 u=root |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default). This feature 
+will be removed in version 2.9. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-12-02 15:35:26,585 p=143898 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/callback/osx_say.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:35:26,588 p=143898 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/callback/say.py) as it seems to be invalid: No module named
+'distutils.spawn'
+
+2019-12-02 15:35:26,651 p=143898 u=root |  PLAY [book] ****************************************************************************************************************************
+2019-12-02 15:35:26,664 p=143898 u=root |  TASK [Gathering Facts] *****************************************************************************************************************
+2019-12-02 15:35:33,061 p=143898 u=root |  [WARNING]: sftp transfer mechanism failed on [172.16.0.30]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2019-12-02 15:35:37,658 p=143898 u=root |  ok: [book]
+2019-12-02 15:35:37,680 p=143898 u=root |  TASK [install xbps docker] *************************************************************************************************************
+2019-12-02 15:35:39,244 p=143898 u=root |  [WARNING]: sftp transfer mechanism failed on [172.16.0.30]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2019-12-02 15:35:43,521 p=143898 u=root |  ok: [book] => (item=docker)
+2019-12-02 15:35:49,139 p=143898 u=root |  ok: [book] => (item=docker-compose)
+2019-12-02 15:35:54,892 p=143898 u=root |  ok: [book] => (item=docker-machine)
+2019-12-02 15:35:54,933 p=143898 u=root |  TASK [Ensure group "ihm" exists] *******************************************************************************************************
+2019-12-02 15:35:56,377 p=143898 u=root |  [WARNING]: sftp transfer mechanism failed on [172.16.0.30]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2019-12-02 15:35:58,994 p=143898 u=root |  ok: [book]
+2019-12-02 15:35:59,036 p=143898 u=root |  TASK [Create symbolic link] ************************************************************************************************************
+2019-12-02 15:36:00,439 p=143898 u=root |  [WARNING]: sftp transfer mechanism failed on [172.16.0.30]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2019-12-02 15:36:03,023 p=143898 u=root |  fatal: [book]: FAILED! => {"changed": false, "gid": 0, "group": "root", "mode": "0755", "msg": "refusing to convert from directory to symlink for /mnt/", "owner": "root", "path": "/mnt/", "size": 6, "state": "directory", "uid": 0}
+2019-12-02 15:36:03,028 p=143898 u=root |  PLAY RECAP *****************************************************************************************************************************
+2019-12-02 15:36:03,029 p=143898 u=root |  book                       : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2019-12-02 15:37:24,749 p=143973 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/docker.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:37:24,820 p=143973 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/iocage.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:37:24,822 p=143973 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/jail.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:37:24,822 p=143973 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/kubectl.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:37:24,823 p=143973 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/libvirt_lxc.py) as it seems to be invalid: No
+module named 'distutils.spawn'
+
+2019-12-02 15:37:24,826 p=143973 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/lxd.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:37:24,841 p=143973 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/oc.py) as it seems to be invalid: No module named
+'distutils.spawn'
+
+2019-12-02 15:37:24,888 p=143973 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/zone.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:37:24,929 p=143973 u=root |  [WARNING]: While constructing a mapping from /home/alex/ansible/install_mysql/install.yaml, line 3, column 3, found a duplicate dict
+key (plugin). Using last defined value only.
+
+2019-12-02 15:37:24,932 p=143973 u=root |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default). This feature 
+will be removed in version 2.9. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-12-02 15:37:24,933 p=143973 u=root |  ERROR! 'plugin' is not a valid attribute for a Play
+
+The error appears to be in '/home/alex/ansible/install_mysql/install.yaml': line 3, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- hosts: book
+  ^ here
+
+2019-12-02 15:37:49,850 p=143977 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/docker.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:37:49,920 p=143977 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/iocage.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:37:49,921 p=143977 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/jail.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:37:49,922 p=143977 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/kubectl.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:37:49,922 p=143977 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/libvirt_lxc.py) as it seems to be invalid: No
+module named 'distutils.spawn'
+
+2019-12-02 15:37:49,925 p=143977 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/lxd.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:37:49,940 p=143977 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/oc.py) as it seems to be invalid: No module named
+'distutils.spawn'
+
+2019-12-02 15:37:49,988 p=143977 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/zone.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:37:50,030 p=143977 u=root |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default). This feature 
+will be removed in version 2.9. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-12-02 15:37:50,030 p=143977 u=root |  ERROR! 'plugin' is not a valid attribute for a Play
+
+The error appears to be in '/home/alex/ansible/install_mysql/install.yaml': line 3, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- hosts: book
+  ^ here
+
+2019-12-02 15:38:24,019 p=143981 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/docker.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:38:24,089 p=143981 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/iocage.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:38:24,090 p=143981 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/jail.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:38:24,091 p=143981 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/kubectl.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:38:24,092 p=143981 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/libvirt_lxc.py) as it seems to be invalid: No
+module named 'distutils.spawn'
+
+2019-12-02 15:38:24,095 p=143981 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/lxd.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:38:24,110 p=143981 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/oc.py) as it seems to be invalid: No module named
+'distutils.spawn'
+
+2019-12-02 15:38:24,158 p=143981 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/zone.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:38:24,203 p=143981 u=root |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default). This feature 
+will be removed in version 2.9. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-12-02 15:38:24,420 p=143981 u=root |  ERROR! 'plugin' is not a valid attribute for a Task
+
+The error appears to be in '/home/alex/ansible/install_mysql/install.yaml': line 6, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: install xbps docker
+    ^ here
+
+This error can be suppressed as a warning using the "invalid_task_attribute_failed" configuration
+2019-12-02 15:38:44,453 p=143987 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/docker.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:38:44,523 p=143987 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/iocage.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:38:44,523 p=143987 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/jail.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:38:44,524 p=143987 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/kubectl.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:38:44,525 p=143987 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/libvirt_lxc.py) as it seems to be invalid: No
+module named 'distutils.spawn'
+
+2019-12-02 15:38:44,528 p=143987 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/lxd.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:38:44,542 p=143987 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/oc.py) as it seems to be invalid: No module named
+'distutils.spawn'
+
+2019-12-02 15:38:44,589 p=143987 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/connection/zone.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:38:44,630 p=143987 u=root |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default). This feature 
+will be removed in version 2.9. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2019-12-02 15:38:44,893 p=143987 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/callback/osx_say.py) as it seems to be invalid: No module
+named 'distutils.spawn'
+
+2019-12-02 15:38:44,895 p=143987 u=root |  [WARNING]: Skipping plugin (/usr/lib/python3/dist-packages/ansible/plugins/callback/say.py) as it seems to be invalid: No module named
+'distutils.spawn'
+
+2019-12-02 15:38:44,957 p=143987 u=root |  PLAY [book] ****************************************************************************************************************************
+2019-12-02 15:38:44,969 p=143987 u=root |  TASK [Gathering Facts] *****************************************************************************************************************
+2019-12-02 15:38:51,328 p=143987 u=root |  [WARNING]: sftp transfer mechanism failed on [172.16.0.30]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2019-12-02 15:38:55,846 p=143987 u=root |  ok: [book]
+2019-12-02 15:38:55,883 p=143987 u=root |  TASK [install xbps docker] *************************************************************************************************************
+2019-12-02 15:38:57,370 p=143987 u=root |  [WARNING]: sftp transfer mechanism failed on [172.16.0.30]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2019-12-02 15:39:02,042 p=143987 u=root |  ok: [book] => (item=docker)
+2019-12-02 15:39:07,808 p=143987 u=root |  ok: [book] => (item=docker-compose)
+2019-12-02 15:39:13,682 p=143987 u=root |  ok: [book] => (item=docker-machine)
+2019-12-02 15:39:13,706 p=143987 u=root |  TASK [Ensure group "ihm" exists] *******************************************************************************************************
+2019-12-02 15:39:15,185 p=143987 u=root |  [WARNING]: sftp transfer mechanism failed on [172.16.0.30]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2019-12-02 15:39:18,021 p=143987 u=root |  ok: [book]
+2019-12-02 15:39:18,065 p=143987 u=root |  TASK [Create symbolic link] ************************************************************************************************************
+2019-12-02 15:39:19,454 p=143987 u=root |  [WARNING]: sftp transfer mechanism failed on [172.16.0.30]. Use ANSIBLE_DEBUG=1 to see detailed information
+
+2019-12-02 15:39:21,946 p=143987 u=root |  fatal: [book]: FAILED! => {"changed": false, "gid": 0, "group": "root", "mode": "0755", "msg": "refusing to convert from directory to symlink for /mnt/", "owner": "root", "path": "/mnt/", "size": 6, "state": "directory", "uid": 0}
+2019-12-02 15:39:21,952 p=143987 u=root |  PLAY RECAP *****************************************************************************************************************************
+2019-12-02 15:39:21,953 p=143987 u=root |  book                       : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
