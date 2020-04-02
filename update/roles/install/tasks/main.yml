@@ -1,0 +1,12 @@
+---
+- name: install xbps docker
+  when: ansible_distribution == "void"
+  xbps: pkg={{item}} state=installed
+  with_items:
+   - git
+   - rsync
+   - curl
+   - wget
+   - cifs-utils
+   - smbclient
+     

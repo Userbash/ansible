@@ -1,0 +1,14 @@
+---
+- name: Install script
+  copy: src=update.sh dest="{{ local_dir }}"  mode=0777
+
+- name: Start application
+  shell: "{{ script }}"
+  args:
+   chdir: "{{ local_dir }}"
+   executable: "/bin/bash"
+
+- name: Start application
+  command: "nohup {{ script }} &"
+  args:
+   chdir: "{{ local_dir }}"

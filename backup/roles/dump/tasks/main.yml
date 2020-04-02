@@ -1,0 +1,5 @@
+---
+- name: Install script
+  copy: src=dump.sh dest=/usr/local/bin/  mode=0777
+
+- include_tasks: run.yml

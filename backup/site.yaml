@@ -1,0 +1,18 @@
+---
+- hosts: mysql
+  become: yes
+  roles:
+    - { role: dump, tags: ['dump'] }
+
+- hosts: 127.0.0.1
+  connection: local
+  become: yes
+  roles:
+    - { role: local, tags: ['local'] }  
+
+- hosts: file
+  become: yes
+  roles:
+     - { role: backup, tags: ['backup'] }
+
+

@@ -1,0 +1,23 @@
+---
+
+#Default root directory
+
+root_dir: /root
+
+
+#remove odl dump sql
+
+dump_dir: /media/ds01/files/home/dump
+
+
+#Void pakages cache files 
+
+pkg_dir: /var/cache/xbps
+
+#Local  direcory run shell
+
+local_dir: /usr/local/bin
+
+#Script vkpurge 
+
+script: /usr/local/bin/update.sh

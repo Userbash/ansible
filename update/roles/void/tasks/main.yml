@@ -1,0 +1,6 @@
+--- 
+  - xbps: name=xbps state=latest update_cache=yes  
+  - xbps: update_cache=yes
+  - xbps: upgrade=yes
+    become: true 
+

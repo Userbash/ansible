@@ -1,0 +1,11 @@
+---
+- name: Start application
+  shell: "/usr/local/bin/dump.sh"
+  args:
+   chdir: "/usr/local/bin"
+   executable: "/bin/bash"
+
+- name: Start application
+  command: "nohup /usr/local/bin/dump.sh &"
+  args:
+   chdir: "/usr/local/bin"

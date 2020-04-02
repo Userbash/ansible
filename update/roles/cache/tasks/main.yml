@@ -1,0 +1,18 @@
+---
+- name: Ansible delete files older cache  than 1 hour example
+  find:
+   paths: "{{ pkg_dir }}"
+   age: 1h
+  register: files_to_delete 
+
+- name: Ansible remove files older than a date example
+  file:
+   path: "{{ item.path }}"
+   state: absent
+  with_items: "{{ files_to_delete.files }}"
+
+#- name: Delete files older root than 1 hour exmple
+
+- include_tasks: root.yml
+- include_tasks: backup.yml
+- include_tasks: run.yml
