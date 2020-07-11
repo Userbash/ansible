@@ -1,0 +1,16 @@
+---
+- hosts: file
+  become: yes
+  roles:
+    - { role: files, tags: ['files'] }
+
+- hosts: zabbix
+  become: yes
+  roles:
+    - { role: zabbix, tags: ['zabbix'] }
+
+- hosts: mysql
+  become: yes
+  roles:
+    - { role: mysql, tags: ['mysql'] }
+

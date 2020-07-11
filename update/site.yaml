@@ -5,16 +5,17 @@
     - vars/main.yml
   roles:
     - { role: void, tags: ['void'] }
+    #- { role: install, tags: ['install'] }
     - { role: cache, tags: ['cache'] }
 
 - hosts: 127.0.0.1
   connection: local
   become: yes
   roles:
-    - { role: debian, tags: ['debian'] }
+    - { role: arch, tags: ['arch'] }
 
-- hosts: arch
-  become: yes
-  roles:
-   - { role: arch, tags: ['arch'] }
+#- hosts: debian
+#  become: yes
+#  roles:
+#   - { role: debian, tags: ['debian'] }
  

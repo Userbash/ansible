@@ -1,0 +1,6 @@
+---
+
+- shell: shutdown -r now
+
+
+
