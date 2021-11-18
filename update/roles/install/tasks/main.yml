@@ -1,7 +1,0 @@
----
-- name: install xbps pakages
-  when: ansible_distribution == "void"
-  xbps: pkg={{item}} state=installed
-  with_items:
-   - linux5.7
-   - linux5.7-headers

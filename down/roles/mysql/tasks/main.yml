@@ -1,8 +1,0 @@
----
-
-- name: Run using a project directory
-  docker_compose:
-   project_src: /home/alex/docker-mysql-master
-   state: absent
-
-- include_tasks: reboot.yml

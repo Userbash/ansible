@@ -1,0 +1,4 @@
+- name: Install a list of packages
+  apt:
+    pkg:
+    - openjdk-11-jdk
