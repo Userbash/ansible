@@ -1,0 +1,24 @@
+---
+
+- hosts: debian
+  become: yes
+  roles:
+   - { role: debian, tags: ['debian'] }
+
+- hosts: docker
+  become: yes
+  vars_files:
+    - vars/default.yml
+  roles:
+   - { role: docker, tags: ['docker'] }
+
+- hosts: jenkins
+  become: yes
+  vars_files:
+    - vars/vars.yml
+  roles:
+    - { role: java, tags: ['java'] }
+    - { role: jenkins, tags: ['jenkins'] }
+
+
+

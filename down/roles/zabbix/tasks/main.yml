@@ -1,8 +1,0 @@
----
-
-- name: Run using a zabbix
-  docker_compose:
-   project_src: /home/alex/docker-zabbix-master
-   state: absent
-
-- include_tasks: reboot.yml

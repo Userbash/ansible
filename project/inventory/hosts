@@ -1,0 +1,8 @@
+[debian]
+worold  ansible_ssh_host=92.38.139.98 ansible_ssh_user=root
+
+[docker]
+worold  ansible_ssh_host=92.38.139.98 ansible_ssh_user=root
+
+[jenkins]
+worold  ansible_ssh_host=92.38.139.98 ansible_ssh_user=root
