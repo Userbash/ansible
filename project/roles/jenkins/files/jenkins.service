@@ -8,7 +8,7 @@ After=network.target
 User=jenkins
 Group=jenkins
 Type=simple
-ExecStart=/usr/bin/java -jar -DJENKINS_HOME=/data/wwwroot/jenkins /data/wwwroot/jenkins.war
+ExecStart=/usr/bin/java -jar -DJENKINS_HOME=/opt/jenkins /opt/jenkins.war
 Restart=always
 StandardOutput=syslog
 StandardError=syslog

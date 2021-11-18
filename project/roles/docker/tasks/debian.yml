@@ -8,6 +8,10 @@
         - curl
         - gnupg2
         - software-properties-common
+        - python3-pip
+        - python3-setuptools
+        - virtualenv
+        - python-pip 
     state: present
     update_cache: no
 
@@ -34,14 +38,4 @@
     state: started
     enabled: true
 
-- name: Check current docker-compose version
-  command: docker-compose --version
-  register: docker_compose_vsn
-  changed_when: false
-  failed_when: false
-  check_mode: no
 
-- set_fact:
-    docker_compose_current_version: "{{ docker_compose_vsn.stdout | regex_search('(\\d+(\\.\\d+)+)') }}"
-  when:
-    - docker_compose_vsn.stdout is defined

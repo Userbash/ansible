@@ -6,25 +6,23 @@
     comment: jenkins 
     password_lock: yes
        
-- name: rm -rf /data/wwwroot/jenkins
-  shell: rm -rf /data/wwwroot/jenkins
+- name: rm -rf /opt/jenkins
+  shell: rm -rf /opt/jenkins
 
 - name: Create a Jenkins directory if it does not exist
   file:
-    path: /data/wwwroot/jenkins
+    path: /opt/jenkins
     state: directory
     recurse: yes
   remote_user: jenkins
 
 # name: change file permissions
-#  shell: |
-#    chmod -R 777 /data/wwwroot
-#    chmod -R 777 /data/logs
-#    #setfacl -R -m u:jenkins:rwx /data/wwwroot 
-#   #setfacl -R -m u:jenkins:rwx /data/logs
+
+- name: make dirs 0755   
+  command: find {{ your_path }} -type d ! -perm 0755 -exec chmod 0755 {} \;
 
 - name: download jenkins
-  shell: wget -P /data/wwwroot http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+  shell: wget -P /opt http://mirrors.jenkins.io/war-stable/latest/jenkins.war
   remote_user: jenkins
 
 - name: Setting jenkins service

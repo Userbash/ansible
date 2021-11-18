@@ -14,6 +14,11 @@
 
 - hosts: jenkins
   become: yes
+  vars_files:
+    - vars/vars.yml
   roles:
     - { role: java, tags: ['java'] }
-    - { role: jenkins , tags: ['jenkins'] }   
+    - { role: jenkins, tags: ['jenkins'] }
+
+
+
